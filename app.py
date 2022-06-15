@@ -14,6 +14,9 @@ PORT = 4100
 def hello():
     return "Hello, World!"
 
+@app.route("/teamname")
+def teamname():
+    return "☕ Lake"
 
 @app.route("/score", methods=["POST"])
 def score_inputs():
