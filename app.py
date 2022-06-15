@@ -14,6 +14,7 @@ PORT = 4100
 def hello():
     return "Hello, World!"
 
+
 @app.route("/score", methods=["POST"])
 def score_inputs():
     content = request.json
@@ -24,6 +25,7 @@ def score_inputs():
     iris_name_result = IRIS_CLASS_NAMES[result[0]]
 
     return {"result": iris_name_result}
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", threaded=True, port=PORT)
